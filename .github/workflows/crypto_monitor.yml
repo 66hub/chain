@@ -1,3 +1,4 @@
+```yaml
 name: Chain.fm Crypto Monitor
 
 on:
@@ -10,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
     
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -22,6 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         
+    - name: Make script executable
+      run: chmod +x chain_fm_monitor.py
+        
     - name: Run Monitor
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -29,3 +34,4 @@ jobs:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         PUSHDEER_KEY: ${{ secrets.PUSHDEER_KEY }}
       run: python chain_fm_monitor.py
+```
