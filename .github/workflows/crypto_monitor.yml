@@ -1,4 +1,3 @@
-```
 name: Chain.fm Crypto Monitor
 
 on:
@@ -29,4 +28,3 @@ jobs:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         PUSHDEER_KEY: ${{ secrets.PUSHDEER_KEY }}
       run: python chain_fm_monitor.py
-```
