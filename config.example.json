@@ -1,0 +1,14 @@
+```json
+{
+    "telegram": {
+        "bot_token": "你的Telegram机器人Token",
+        "chat_id": "接收消息的Chat ID"
+    },
+    "discord": {
+        "webhook_url": "Discord Webhook地址"
+    },
+    "pushdeer": {
+        "key": "PushDeer推送Key"
+    }
+}
+```
